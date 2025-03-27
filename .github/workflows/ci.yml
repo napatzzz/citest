@@ -1,0 +1,18 @@
+ name: CI Test Pipeline 
+
+on: 
+  push: 
+    branches: 
+      - main 
+  pull_request: 
+
+jobs: 
+  build-and-test: #name of jobs
+    runs-on: ubuntu-latest #server / provide from github
+    steps: 
+      - name: Checkout source code  #add source code to server
+        uses: actions/checkout@v3 
+      - name: Simulate Build 
+        run: echo "Building project..." 
+      - name: Simulate Test 
+        run: echo "Running tests... ✅" 
